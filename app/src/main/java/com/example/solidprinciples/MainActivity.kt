@@ -32,7 +32,6 @@ import com.example.solidprinciples.ui.theme.SolidPrinciplesTheme
 
  ***/
 
-
 /*** SOLID
  🔹 S — Single Responsibility Principle (SRP):- A class should have only one reason to change.
  🔹 O — Open/Closed Principle (OCP):- Software entities should be open for extension, but closed for modification.
@@ -47,6 +46,17 @@ OCP	           Extend, don’t modify	                 Use sealed classes/interf
 LSP	           Replace base with subclass	         BaseActivity vs MainActivity
 ISP	           Small interfaces	                     Clickable vs LongClickable
 DIP	           Depend on abstraction	             Inject interfaces via Hilt */
+
+/***
+
+ Program to an Interface, Not an Implementation.
+ ex-code - file1
+
+ Favor Composition over Inheritance
+ ex-code - file2
+
+
+***/
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
