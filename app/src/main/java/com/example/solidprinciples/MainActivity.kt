@@ -55,7 +55,6 @@ DIP	           Depend on abstraction	             Inject interfaces via Hilt */
  Favor Composition over Inheritance
  ex-code - file2
 
-
 ***/
 
 class MainActivity : ComponentActivity() {
