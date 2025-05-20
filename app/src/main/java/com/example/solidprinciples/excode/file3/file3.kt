@@ -42,7 +42,7 @@ class User {
 }
 
 // Open/Closed Principle's ❌ Violation
-class PaymentProcessor {
+class MPaymentProcessor {
     fun processPayment(type: String) {
         when (type) {
             "credit" -> processCreditCard()
@@ -61,7 +61,7 @@ open class Bird {
     open fun fly() = println("Flying")
 }
 
-class Penguin : Bird() {
+class MPenguin : Bird() {
     override fun fly() = throw Error("Penguins can't fly!") // Breaks LSP!
 }
 
@@ -72,18 +72,18 @@ interface Worker {
     fun sleep()
 }
 
-class Robot : Worker {  // Robot doesn’t need eat() or sleep()!
+class MRobot : Worker {  // Robot doesn’t need eat() or sleep()!
     override fun work() = println("Working")
     override fun eat() = throw Error("Robots don’t eat!")
     override fun sleep() = throw Error("Robots don’t sleep!")
 }
 
 // Dependency Inversion Principle's ❌ Violation
-class LightBulb {
+class MLightBulb {
     fun turnOn() = println("Bulb on")
 }
 
-class Switch {
-    private val bulb = LightBulb()  // Direct dependency
+class MSwitch {
+    private val bulb = MLightBulb()  // Direct dependency
     fun operate() = bulb.turnOn()
 }
