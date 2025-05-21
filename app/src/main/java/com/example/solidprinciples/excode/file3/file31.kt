@@ -2,15 +2,15 @@ package com.example.solidprinciples.excode.file3
 
 // Single Responsibility Principle's ✅ Solution
 class UserRepository {
-    fun saveToDb(user: User) { /* Only DB logic */ }
+    fun saveToDb(user: User) { println("Saved to Db!!!") }
 }
 
 class EmailService {
-    fun sendEmail(user: User) { /* Only email logic */ }
+    fun sendEmail(user: User) { println("Email Sent!!!") }
 }
 
 class UserValidator {
-    fun validate(user: User) { /* Only validation */ }
+    fun validate(user: User) { println("Validating!!!") }
 }
 
 
