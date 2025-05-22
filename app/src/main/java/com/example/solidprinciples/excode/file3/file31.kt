@@ -20,11 +20,15 @@ interface PaymentMethod {
 }
 
 class CreditCard : PaymentMethod {
-    override fun process() { /* Credit logic */ }
+    override fun process() { println("Processing Payment using Credit Card!") }
 }
 
 class PayPal : PaymentMethod {
-    override fun process() { /* PayPal logic */ }
+    override fun process() = println("Processing Payment using Paypal!")
+}
+
+class UPI: PaymentMethod {
+    override fun process() =  println("Processing Payment using UPI!")
 }
 
 class PaymentProcessor {

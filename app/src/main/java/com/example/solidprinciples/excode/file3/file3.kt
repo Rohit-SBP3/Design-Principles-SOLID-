@@ -43,6 +43,7 @@ class User {
 
 // Open/Closed Principle's ❌ Violation
 class MPaymentProcessor {
+
     fun processPayment(type: String) {
         when (type) {
             "credit" -> processCreditCard()
