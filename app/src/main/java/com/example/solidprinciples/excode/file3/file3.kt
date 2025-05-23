@@ -6,23 +6,28 @@ package com.example.solidprinciples.excode.file3
  more maintainable, scalable, and robust.
 
  1. Single Responsibility Principle (SRP)
-    "A class should have only one reason to change."
+    Core Idea: "A class should have only one job."
+    Key Question: "Does this class have more than one reason to change?"
     → Each class should do one thing and do it well.
 
  2. Open/Closed Principle (OCP)
-    "Software should be open for extension but closed for modification."
+    Core Idea: "Software should be open for extension but closed for modification."
+    Key Question: "Can I add new features without changing existing code?"
     → Extend behavior without changing existing code (use interfaces/abstractions).
 
  3. Liskov Substitution Principle (LSP)
-    "Subclasses should be substitutable for their parent class."
+    Core Idea: "Subclasses should replace parent classes without breaking behavior."
+    Key Question: "Can I swap parent and child classes without errors?"
     → Child classes must not break parent class behavior.
 
  4. Interface Segregation Principle (ISP)
-    "Clients shouldn’t depend on interfaces they don’t use."
+    Core Idea: "Clients shouldn’t depend on interfaces they don’t use."
+    Key Question: "Are interfaces forcing classes to implement unused methods?"
     → Prefer small, focused interfaces over large monolithic ones.
 
  5. Dependency Inversion Principle (DIP)
-    "Depend on abstractions, not concrete implementations."
+    Core Idea: "Depend on abstractions, not concrete implementations."
+    Key Question: "Are high-level modules tightly coupled to low-level details?"
     → High-level modules should not depend on low-level details.
 
  Principle	                  Key Idea	                            Kotlin Solution
