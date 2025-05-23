@@ -1,5 +1,19 @@
 package com.example.solidprinciples.excode.file3
 
+
+fun main(){
+
+    val flyingBird = FlyingBird()
+    flyingBird.fly()
+    flyingBird.eat()
+
+    val swimmingBirds = SwimmingBirds()
+    swimmingBirds.swim()
+    swimmingBirds.eat()
+    swimmingBirds.hasFeathers()
+}
+
+
 // Single Responsibility Principle's ✅ Solution
 class UserRepository {
     fun saveToDb(user: User) { println("Saved to Db!!!") }
@@ -38,13 +52,20 @@ class PaymentProcessor {
 }
 
 // Liskov Substitution Principle's ✅ Solution
-open class MBird
+open class MBird {
+    fun hasFeathers(): Boolean = true
+    fun eat() = println("Eating")
+}
 
 open class FlyingBird : MBird() {
     fun fly() = println("Flying")
 }
 
-class Penguin : MBird()  // No fly() method, so no violation
+open class SwimmingBirds: MBird() {
+    fun swim() = println("Swimming")
+}
+
+class Penguin : SwimmingBirds()  // No fly() method, so no violation
 
 
 // Interface Segregation Principle's ✅ Solution
