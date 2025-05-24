@@ -72,23 +72,34 @@ class Penguin : SwimmingBirds()  // No fly() method, so no violation
 interface Workable { fun work() }
 interface Eatable { fun eat() }
 interface Sleepable { fun sleep() }
+interface Excretion { fun excrete() }
+interface Chargeable { fun charge() }
 
-class Human : Workable, Eatable, Sleepable { /* Implements all */
+class Human : Workable, Eatable, Sleepable, Excretion { /* Implements all */
     override fun work() {
-        TODO("Not yet implemented")
+        println("Human is Working")
     }
 
     override fun eat() {
-        TODO("Not yet implemented")
+        println("Human is Eating")
     }
 
     override fun sleep() {
-        TODO("Not yet implemented")
+        println("Human is Sleeping")
+    }
+
+    override fun excrete() {
+        println("Human is Excreting")
     }
 }
-class Robot : Workable { /* Only implements work() */
+class Robot : Workable, Chargeable {
+    
     override fun work() {
-        TODO("Not yet implemented")
+        println("Robot is Working")
+    }
+
+    override fun charge() {
+        println("Robot is being Charged!")
     }
 }
 
