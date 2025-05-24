@@ -3,14 +3,21 @@ package com.example.solidprinciples.excode.file3
 
 fun main(){
 
-    val flyingBird = FlyingBird()
+    /*val flyingBird = FlyingBird()
     flyingBird.fly()
     flyingBird.eat()
 
     val swimmingBirds = SwimmingBirds()
     swimmingBirds.swim()
     swimmingBirds.eat()
-    swimmingBirds.hasFeathers()
+    swimmingBirds.hasFeathers()*/
+
+    val c = CeilingFan()
+    val l = LightBulb()
+    val s1 = Switch(c)
+    val s2 = Switch(l)
+    s1.operate()
+    s2.operate()
 }
 
 
@@ -112,10 +119,12 @@ class LightBulb : Switchable {
     override fun turnOn() = println("Bulb on")
 }
 
+class CeilingFan: Switchable {
+    override fun turnOn() {
+        println("Fan is on")
+    }
+}
+
 class Switch(private val device: Switchable) {  // Depends on abstraction
     fun operate() = device.turnOn()
 }
-
-// Usage:
-val bulb = LightBulb()
-val switch = Switch(bulb)  // Can switch ANY Switchable device
